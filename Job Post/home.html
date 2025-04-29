@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Font Awesome Free CDN -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <div class="main">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light p-3 shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">LOGO</a>
+    
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Collapsible Menu -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="#"><i class="bi bi-house-door-fill"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="#"><i class="bi bi-briefcase-fill"></i> Jobs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="#"><i class="bi bi-building-fill"></i> Companies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="#"><i class="bi bi-telephone-fill"></i> Contact</a>
+            </li>
+          </ul>
+    
+          <div class="d-flex align-items-center gap-3">
+            <a href="#" class="btn btn-outline-primary btn-sm">+ Post Jobs</a>
+            <a href="#" class="text-dark fs-4"><i class="bi bi-person-circle"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    
+    <div class="hero-section">
+        <div class="text-container">
+          <h1 class="text-light">Profile Settings</h1>
+          <p>
+            Profile  <i class="bi bi-chevron-double-right"></i> Profile Settings
+          </p>
+        </div>
+      </div>
+
+
+      
+
+ <div class="myclass">
+  <div class="row">
+ 
+<aside class="col-lg-3 bg-light border-end min-vh-100 mt-5 p-5 ">
+  <div class="d-grid gap-2">
+    <a href="#" class="custom-sidebar-btn text-start px-4 p-3 "><i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
+    <a href="#" class="custom-sidebar-btn text-start px-4 p-3"><i class="bi bi-pencil-square me-2"></i>Edit Profile</a>
+    <a href="#" class="custom-sidebar-btn text-start px-4 p-3"><i class="bi bi-eye me-2"></i>View Company Profile</a>
+    <a href="#" class="btn btn-primary text-start px-4 fw-semibold p-3" id="postJobBtn"><i class="bi bi-plus-circle me-2"></i>Post Job</a>
+    <a href="#" class="custom-sidebar-btn text-start px-4 p-3"><i class="bi bi-card-checklist me-2"></i>Posted Jobs</a>
+    <a href="#" class="custom-sidebar-btn text-start px-4 p-3"><i class="bi bi-search me-2"></i>CV Search</a>
+    <a href="#" class="custom-sidebar-btn text-start px-4 p-3"><i class="bi bi-box-seam me-2"></i>Packages</a>
+    <a href="#" class="custom-sidebar-btn text-start px-4 p-3"><i class="bi bi-chat-dots me-2"></i>Messages</a>
+    <a href="#" class="custom-sidebar-btn text-danger text-start px-4 p-3"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
+  </div>
+</aside>
+
+
+<main class="col-lg-9 p-4 mt-4" id="jobPostSection" style="display: none;">
+  <div class="card shadow-sm border-0 p-4">
+    <h4 class="fw-bold mb-4 bg-secondary text-light p-3">Job Posting Information</h4>
+
+    <form id="jobPostForm">
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <label class="form-label" ><img src="images/job-position.png" alt="" style="width: 40px;height: 40px; margin-right: 8px; ">Job Title</label>
+          <input type="text" id="jobTitle" class="form-control form-control-md py-3 px-4 w-75" placeholder="Enter Job Title">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label"><img src="images/job-description.png" alt=""  style="width: 30px;height: 30px; margin-right: 8px;">Job Description</label>
+          <input type="text" id="jobShortDescription" class="form-control form-control-md py-3 px-4 w-75" placeholder="Enter Job Description">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">
+            <img src="images/skills.png" alt="" style="width: 30px; height: 30px; margin-right: 8px;">
+            Job Skills
+          </label>
+          <select class="form-select form-select-md py-3 px-4 w-75" id="jobSkills">
+            <option selected disabled>Select Job Skill</option>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+            <option>Python</option>
+            <option>React</option>
+            <option>Java</option>
+          </select>
+        </div>
+        
+        <div class="col-md-6">
+          <label class="form-label">
+            <img src="images/gender.png" alt="" style="width: 30px; height: 30px; margin-right: 8px;">
+            Gender
+          </label>
+          <select class="form-select form-select-md py-3 px-4 w-75" id="jobGender">
+            <option selected disabled>Select</option>
+            <option>Male</option>
+            <option>Female</option>
+           
+          </select>
+        </div>
+        
+        <div class="col-md-6">
+          <label class="form-label">
+            <img src="images/country.png" alt="" style="width: 30px; height: 30px; margin-right: 8px;">
+            Country
+          </label>
+          <select class="form-select form-select-md py-3 px-4 w-75" id="jobCountry">
+            <option selected disabled>Select</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+            <option>other</option>
+           
+           
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">
+            <img src="images/india.svg" alt="" style="width: 30px; height: 30px; margin-right: 8px;">
+            State
+          </label>
+          <select class="form-select form-select-md py-3 px-4 w-75" id="jobState">
+            <option selected disabled>Select</option>
+            <option>Tamilnadu</option>
+            <option>Kerala</option>
+            <option>Andra</option>
+            <option>other</option>
+           
+           
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label"><img src="images/city.png" alt=""  style="width: 30px;height: 30px; margin-right: 8px;">City</label>
+          <input type="text"  id="jobCity" class="form-control form-control-md py-3 px-4 w-75" placeholder="Enter City">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label"><img src="images/careerlevel.png" alt=""  style="width: 30px;height: 30px; margin-right: 8px;">Career Level</label>
+          <input type="text" id="careerLevel" class="form-control form-control-md py-3 px-4 w-75" placeholder="Enter Career Level">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label"><img src="images/salaryfrm.png" alt=""  style="width: 30px;height: 30px; margin-right: 8px;">Salary From</label>
+          <input type="text" id="salaryFrom" class="form-control form-control-md py-3 px-4 w-75" placeholder="Enter Minimum Salary">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label"><img src="images/salaryto.png" alt=""  style="width: 30px;height: 30px; margin-right: 8px;">Salary To</label>
+          <input type="text" id="salaryTo" class="form-control form-control-md py-3 px-4 w-75" placeholder="Enter Maximum Salary">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label"><img src="images/salarycurr.png" alt=""  style="width: 30px;height: 30px; margin-right: 8px;">Salary Currency</label>
+          <input type="text" id="salaryCurrency" class="form-control form-control-md py-3 px-4 w-75" placeholder="e.g. USD, INR">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label"><img src="images/salaryperiod.png" alt=""  style="width: 30px;height: 30px; margin-right: 8px;">Salary Period</label>
+          <input type="text"  id="salaryPeriod" class="form-control form-control-md py-3 px-4 w-75" placeholder="e.g. Monthly, Yearly">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label"><img src="images/jobtype.png" alt=""  style="width: 30px;height: 30px; margin-right: 8px;">Job Type</label>
+          <input type="text" id="jobType" class="form-control form-control-md py-3 px-4 w-75" placeholder="e.g. Full Time">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label"><img src="images/job shifft.png" alt=""  style="width: 30px;height: 30px; margin-right: 8px;">Job Shift</label>
+          <input type="text" id="jobShift" class="form-control form-control-md py-3 px-4 w-75" placeholder="e.g. Morning">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label"><img src="images/position.png" alt=""  style="width: 30px;height: 30px; margin-right: 8px;">Position</label>
+          <input type="text"  id="jobPosition" class="form-control form-control-md py-3 px-4 w-75" placeholder="Enter Position">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label"><img src="images/expiry.png" alt=""  style="width: 30px;height: 30px; margin-right: 8px;">Job Expiry Date</label>
+          <input type="text" id="jobExpiry" class="form-control form-control-md py-3 px-4 w-75" placeholder="Enter Expiry Date">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label"><img src="images/require.png" alt=""  style="width: 30px;height: 30px;  margin-right: 8px;">Required Job Experience</label>
+          <input type="text" id="requiredExperience" class="form-control form-control-md py-3 px-4 w-75" placeholder="e.g. 1-2 years">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label"  ><img src="images/degree.png" alt=""  style="width: 30px;height: 30px; margin-right: 8px;">Required Degree Level</label>
+          <input type="text"  id="requiredDegree" class="form-control form-control-md py-3 px-4 w-75" placeholder="e.g. 1-2 years">
+        </div>
+      </div>
+
+      
+
+      <!-- Job Benefits -->
+      <div class="mb-3">
+        <h4 class="fw-bold mb-4 bg-secondary text-light p-3">Job Benefits</h4>
+        <label class="form-label" ><img src="images/incentive.png" alt=""  style="width: 30px;height: 30px; margin-right: 8px;">Job Benefits</label>
+
+        <textarea class="form-control form-control-md py-3 px-4 w-75"  id="jobBenefits" rows="3" placeholder="e.g. Health insurance, Remote work..."></textarea>
+      </div>
+
+      <div class="mb-3">
+        <h4 class="fw-bold mb-4 bg-secondary text-light p-3">Job Description</h4>
+        <label class="form-label" ><img src="images/job-description.png" alt=""  style="width: 30px;height: 30px; margin-right: 8px;">Job Description</label>
+
+        <textarea id="jobFullDescription" class="form-control form-control-md py-3 px-4 w-75" rows="3" placeholder="e.g. Health insurance, Remote work..."></textarea>
+      </div>
+
+      <!-- Upload Button -->
+      <div class="text-end mt-4">
+        <button type="submit" class="btn btn-primary px-4 w-100 p-3 fs-4">Upload Jobs</button>
+      </div>
+    </form>
+    
+  </div>
+  
+</main>
+
+<!-- <div id="output" class="mt-5 p-4 bg-white border rounded shadow-sm"></div> -->
+
+</div>
+
+</div>
+
+  <!-- footer -->
+  <div class="page-wrapper">
+    <div class="newsletter">
+      <div class="head">
+        <h2>Subscribe Our Newsletter!</h2>
+      </div>
+      <div class="mb-2">
+        <p>Lorem Ipsum Is Simply Dummy Text Printing And Type Setting Industry Lorem Ipsum Been Industry<br>
+          Standard Dummy Text Ever Since When Unknown Printer Took A Galley.</p>
+      </div>
+      <div class="custom-input-group mb-2">
+        <span class="custom-icon">
+          <i class="bi bi-envelope text-primary"></i>
+        </span>
+        <input type="email" placeholder="Enter Your Email....">
+        <button>SUBSCRIBE</button>
+      </div>
+    </div>
+
+
+
+    <footer>
+      <div class="footer-content py-5">
+        <div class="container">
+          <div class="row gy-4">
+            <!-- Logo and Description -->
+            <div class="col-md-4 text-center text-md-start">
+              <h5>
+                <span class="px-3 py-1 d-inline-block text-dark"
+                  style="background-color: rgb(229, 227, 224);">LOGO</span>
+              </h5>
+              <p class="mt-3 mb-2">Lorem Ipsum Is Simply Dummy Text Of<br>Printing And Type Setting Industry.</p>
+              <p class="mb-2">Lorem Ipsum Been Industry Standard<br>Dummy Text Ever Since.</p>
+              <div class="social-icons mt-3 d-flex gap-3 justify-content-center justify-content-md-start">
+                <i class="bi bi-facebook fs-5"></i>
+                <i class="bi bi-google fs-5"></i>
+                <i class="bi bi-twitter fs-5"></i>
+                <i class="bi bi-instagram fs-5"></i>
+              </div>
+            </div>
+
+            <!-- Job Categories -->
+            <div class="col-md-2">
+              <h5 class="mb-3">Job Categories</h5>
+              <ul class="list-unstyled">
+                <li><i class="bi bi-chevron-double-right me-2"></i>Work From Home</li>
+                <li><i class="bi bi-chevron-double-right me-2"></i>Internship Job</li>
+                <li><i class="bi bi-chevron-double-right me-2"></i>Freelancer Job</li>
+                <li><i class="bi bi-chevron-double-right me-2"></i>Part Time Job</li>
+                <li><i class="bi bi-chevron-double-right me-2"></i>Full Time Job</li>
+              </ul>
+            </div>
+
+            <!-- Job Type -->
+            <div class="col-md-2">
+              <h5 class="mb-3">Job Type</h5>
+              <ul class="list-unstyled">
+                <li><i class="bi bi-chevron-double-right me-2"></i>Create Account</li>
+                <li><i class="bi bi-chevron-double-right me-2"></i>Career Counselling</li>
+                <li><i class="bi bi-chevron-double-right me-2"></i>My Oficiona</li>
+                <li><i class="bi bi-chevron-double-right me-2"></i>FAQ</li>
+                <li><i class="bi bi-chevron-double-right me-2"></i>Report a Problem</li>
+              </ul>
+            </div>
+
+            <!-- Resources -->
+            <div class="col-md-2">
+              <h5 class="mb-3">Resources</h5>
+              <ul class="list-unstyled">
+                <li><i class="bi bi-chevron-double-right me-2"></i>My Account</li>
+                <li><i class="bi bi-chevron-double-right me-2"></i>Support</li>
+                <li><i class="bi bi-chevron-double-right me-2"></i>How it Works</li>
+                <li><i class="bi bi-chevron-double-right me-2"></i>Underwriting</li>
+                <li><i class="bi bi-chevron-double-right me-2"></i>Employers</li>
+              </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-2">
+              <h5 class="mb-3">Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><i class="bi bi-chevron-double-right me-2"></i>Job Listing</li>
+                <li><i class="bi bi-chevron-double-right me-2"></i>About Us</li>
+                <li><i class="bi bi-chevron-double-right me-2"></i>Contact Us</li>
+                <li><i class="bi bi-chevron-double-right me-2"></i>Privacy Policy</li>
+                <li><i class="bi bi-chevron-double-right me-2"></i>Terms & Conditions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom text-center py-3 text-dark bg-light">
+        Copyright © 2024 All Rights Reserved
+      </div>
+    </footer>
+
+
+
+  </div>
+
+
+<!-- main -->
+  </div>
+ 
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+

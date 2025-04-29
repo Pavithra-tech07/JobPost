@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <h2 class="mb-4">Job Details</h2>
+    <div id="jobOutput" class="p-4 bg-white border rounded shadow-sm"></div>
+  </div>
+
+  <script>
+    const jobData = JSON.parse(localStorage.getItem('jobData'));
+    const outputDiv = document.getElementById('jobOutput');
+
+    if (jobData) {
+      outputDiv.innerHTML = `
+        <p><strong>Title:</strong> ${jobData.title}</p>
+        <p><strong>Description:</strong> ${jobData.shortDescription}</p>
+        <p><strong>Skills:</strong> ${jobData.skills}</p>
+        <p><strong>Gender:</strong> ${jobData.gender}</p>
+        <p><strong>Country:</strong> ${jobData.country}</p>
+        <p><strong>State:</strong> ${jobData.state}</p>
+        <p><strong>City:</strong> ${jobData.city}</p>
+        <p><strong>Career Level:</strong> ${jobData.careerLevel}</p>
+        <p><strong>Salary:</strong> ${jobData.salaryFrom} - ${jobData.salaryTo} ${jobData.salaryCurrency} (${jobData.salaryPeriod})</p>
+        <p><strong>Job Type:</strong> ${jobData.jobType}</p>
+        <p><strong>Shift:</strong> ${jobData.jobShift}</p>
+        <p><strong>Position:</strong> ${jobData.position}</p>
+        <p><strong>Expiry Date:</strong> ${jobData.expiryDate}</p>
+        <p><strong>Experience:</strong> ${jobData.experience}</p>
+        <p><strong>Degree:</strong> ${jobData.degree}</p>
+        <p><strong>Benefits:</strong> ${jobData.benefits}</p>
+        <p><strong>Full Description:</strong> ${jobData.fullDescription}</p>
+      `;
+    } else {
+      outputDiv.innerHTML = `<p>No job data found!</p>`;
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+  
